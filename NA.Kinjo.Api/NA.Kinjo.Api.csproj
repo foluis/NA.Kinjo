@@ -16,4 +16,9 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\NA.Kinjo.DataAccess\NA.Kinjo.DataAccess.csproj" />
+    <ProjectReference Include="..\NA.Kinjo.Entities\NA.Kinjo.Entities.csproj" />
+  </ItemGroup>
+
 </Project>

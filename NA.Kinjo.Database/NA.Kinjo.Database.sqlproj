@@ -57,5 +57,21 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="Dbo" />
+    <Folder Include="Dbo\Views" />
+    <Folder Include="Dbo\Programmability" />
+    <Folder Include="Dbo\Tables" />
+    <Folder Include="Dbo\Scripts" />
+    <Folder Include="Dbo\Scripts\Post-Deploy" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Dbo\Tables\AppUser.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dbo\Scripts\Post-Deploy\DatabaseInitialData.sql" />
+    <None Include="NA.Kinjo.Database.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Dbo\Scripts\Post-Deploy\Script.PostDeployment.sql" />
   </ItemGroup>
 </Project>

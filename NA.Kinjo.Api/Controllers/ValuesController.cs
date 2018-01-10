@@ -3,16 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using NA.Kinjo.DataAccess.Interfaces;
 
 namespace NA.Kinjo.Api.Controllers
 {
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
+        private readonly IAppUserRepository _appUserRepository;
+
+        public ValuesController(IAppUserRepository appUserRepository)
+        {
+            _appUserRepository = appUserRepository;
+        }
+
         // GET api/values
         [HttpGet]
         public IEnumerable<string> Get()
         {
+            var result = _appUserRepository.GetAppUsers(1, 10, "Col1", "Col1").Result;
             return new string[] { "value1", "value2" };
         }
 

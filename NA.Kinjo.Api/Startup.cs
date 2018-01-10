@@ -30,6 +30,16 @@ namespace NA.Kinjo.Api
             services.AddSingleton(customSettings);
 
             services.AddMvc();
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("MustBeAdmin",
+                    policy =>
+                    {
+                        policy.RequireAuthenticatedUser().RequireRole("Admin");
+                    });
+            });
+
             services.AddTransient<IBaseRepository, BaseRepository>();
             services.AddTransient<IAppUserRepository, AppUserRepository>();
         }

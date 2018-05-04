@@ -8,6 +8,7 @@ namespace NA.Kinjo.DataAccess.Interfaces
 {
     public interface IAppUserRepository
     {
-        Task<IEnumerable<AppUser>> GetAppUsers(int pageNum, int pageSize, string sortColumnName, string sortOrder);
+        Task<int> CreateAppUsers(AppUser appUser);
+        Task<IEnumerable<AppUser>> GetAppUsers(int pageNum, int pageSize, string sortColumnName, string sortOrder);        
     }
 }

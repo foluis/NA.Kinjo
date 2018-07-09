@@ -39,7 +39,7 @@ namespace NA.Kinjo.Api.Controllers
             }
             catch (Exception ex)
             {
-
+				var error = ex.ToString();
                 return StatusCode(500);
             }
             

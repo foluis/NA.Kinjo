@@ -42,6 +42,7 @@ namespace NA.Kinjo.Api
 
             services.AddTransient<IBaseRepository, BaseRepository>();
             services.AddTransient<IAppUserRepository, AppUserRepository>();
+            services.AddTransient<ICompanyRepository, CompanyRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

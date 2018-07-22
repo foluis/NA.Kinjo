@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Text;
-using System.Threading.Tasks;
-using Dapper;
+﻿using Dapper;
 using NA.Kinjo.DataAccess.Interfaces;
 using NA.Kinjo.Entities;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Threading.Tasks;
 
 namespace NA.Kinjo.DataAccess.Repositories
 {
@@ -55,5 +54,23 @@ namespace NA.Kinjo.DataAccess.Repositories
 
             return appUser;
         }
+
+        //public async Task<int> CreateOwner(AppUser appUser)
+        //{
+        //    using (var connection = _base.GetConnection())
+        //    {
+        //        var parameters = new DynamicParameters();
+        //        parameters.Add("@Email", appUser.Email);
+        //        parameters.Add("@Password", appUser.Password);
+
+        //        var appUserId = await connection.QuerySingleAsync<int>("CreateAppUser", parameters, null, null, CommandType.StoredProcedure);
+
+
+        //        return appUserId;
+        //        //return rows > 0
+        //        //    ? IdentityResult.Success
+        //        //    : IdentityResult.Failed(new IdentityError { Description = $"Could not create user {user.Email}." });
+        //    }
+        //}
     }
 }

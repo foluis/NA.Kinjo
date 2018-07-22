@@ -68,6 +68,8 @@
     <Build Include="Dbo\Tables\AppUser.sql" />
     <Build Include="Dbo\Programmability\CreateAppUser.sql" />
     <Build Include="Dbo\Tables\Company.sql" />
+    <Build Include="Dbo\Tables\UserCompany.sql" />
+    <Build Include="Dbo\Programmability\CreateCompany.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Dbo\Scripts\Post-Deploy\DatabaseInitialData.sql" />

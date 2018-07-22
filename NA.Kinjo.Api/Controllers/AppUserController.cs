@@ -14,7 +14,7 @@ namespace NA.Kinjo.Api.Controllers
     [Route("api/AppUser")]
     public class AppUserController : Controller
     {
-        private readonly IAppUserRepository  _appUserRepository ;
+        private readonly IAppUserRepository  _appUserRepository;
 
         public AppUserController(IAppUserRepository appUserRepository)
         {
@@ -28,8 +28,7 @@ namespace NA.Kinjo.Api.Controllers
             try
             {
                 var appUser = new AppUser
-                {
-                    Username = user.Email,
+                {                    
                     Email = user.Email,
                     Password = user.Password
                 };

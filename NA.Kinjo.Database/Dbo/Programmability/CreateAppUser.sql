@@ -7,9 +7,9 @@ BEGIN
 	SET NOCOUNT ON;
 
     INSERT INTO AppUser 
-		(Username, Email, Password)
+		(Email, Password)
 		OUTPUT INSERTED.Id
 	VALUES 
-		(@Email, @Email,@Password)
+		(@Email,@Password)
 END
 GO

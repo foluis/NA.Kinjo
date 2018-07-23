@@ -72,6 +72,7 @@
     <Build Include="Dbo\Programmability\CreateCompany.sql" />
     <Build Include="Dbo\Programmability\GetCompanyByEmail.sql" />
     <Build Include="Dbo\Programmability\UpdateCompany.sql" />
+    <Build Include="Dbo\Programmability\DeleteCompany.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Dbo\Scripts\Post-Deploy\DatabaseInitialData.sql" />

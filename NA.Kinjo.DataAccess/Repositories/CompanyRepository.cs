@@ -1,7 +1,7 @@
 ﻿using Dapper;
 using NA.Kinjo.DataAccess.Interfaces;
 using NA.Kinjo.Entities;
-using NA.Kinjo.Entities.ViewModel;
+using System;
 using System.Data;
 using System.Threading.Tasks;
 
@@ -16,13 +16,16 @@ namespace NA.Kinjo.DataAccess.Repositories
             _base = baseRepo;
         }
 
-        public async Task<int> CreateCompany(AddCompany company)
+        public async Task<int> CreateCompany(Company company)
         {
             using (var connection = _base.GetConnection())
             {
                 var parameters = new DynamicParameters();
                 parameters.Add("@Email", company.Email);
-                parameters.Add("@Password", company.Password);
+
+                var password = GeneratePassword();
+
+                parameters.Add("@Password", password);
 
                 parameters.Add("@Name", company.Name);                
                 parameters.Add("@Address", company.Address);
@@ -32,6 +35,13 @@ namespace NA.Kinjo.DataAccess.Repositories
 
                 return appUserId;
             }
+        }
+
+        private string GeneratePassword()
+        {
+            Random rnd = new Random();
+            int dice = rnd.Next(10000, 100000);
+            return dice.ToString();
         }
 
         public async Task<Company> GetCompanyByEmail(string companyEmail)
@@ -59,6 +69,19 @@ namespace NA.Kinjo.DataAccess.Repositories
                 parameters.Add("@Phone", company.Phone);
 
                 var rowsAfected = await connection.ExecuteAsync("UpdateCompany", parameters, null, null, CommandType.StoredProcedure);
+
+                return rowsAfected;
+            }
+        }
+
+        public async Task<int> DeleteCompany(int id)
+        {
+            using (var connection = _base.GetConnection())
+            {
+                var parameters = new DynamicParameters();
+                parameters.Add("@Id", id);
+              
+                var rowsAfected = await connection.ExecuteAsync("DeleteCompany", parameters, null, null, CommandType.StoredProcedure);
 
                 return rowsAfected;
             }

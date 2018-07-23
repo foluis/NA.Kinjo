@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace NA.Kinjo.Entities.ViewModel
+﻿namespace NA.Kinjo.Entities.ViewModel
 {
-    public class AddCompany
+    public class AddCompanyOld
     {
         public string Name { get; set; }
         public string Email { get; set; }

@@ -3,7 +3,7 @@
 	@Email varchar(100), 	
 	@Name varchar(50), 
 	@Address varchar(200), 
-	@Phone varchar(20)	
+	@Phone varchar(20)
 AS
 BEGIN
 

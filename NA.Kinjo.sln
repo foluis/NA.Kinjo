@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NA.Kinjo.Entities", "NA.Kin
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "NA.Kinjo.Database", "NA.Kinjo.Database\NA.Kinjo.Database.sqlproj", "{A92280B1-6C6D-4BE2-9B18-B1828D3C23AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NA.Kinjo.Web", "NA.Kinjo.Web\NA.Kinjo.Web.csproj", "{824945BA-1848-4EDD-9BD0-1E1A12B7D26D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NA.Kinjo.Web", "NA.Kinjo.Web\NA.Kinjo.Web.csproj", "{51000058-2BE4-422B-891D-A5DB2FAD232E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,10 +37,10 @@ Global
 		{A92280B1-6C6D-4BE2-9B18-B1828D3C23AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A92280B1-6C6D-4BE2-9B18-B1828D3C23AE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A92280B1-6C6D-4BE2-9B18-B1828D3C23AE}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{824945BA-1848-4EDD-9BD0-1E1A12B7D26D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{824945BA-1848-4EDD-9BD0-1E1A12B7D26D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{824945BA-1848-4EDD-9BD0-1E1A12B7D26D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{824945BA-1848-4EDD-9BD0-1E1A12B7D26D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51000058-2BE4-422B-891D-A5DB2FAD232E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51000058-2BE4-422B-891D-A5DB2FAD232E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51000058-2BE4-422B-891D-A5DB2FAD232E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51000058-2BE4-422B-891D-A5DB2FAD232E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

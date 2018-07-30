@@ -12,8 +12,13 @@
         <div class='clearfix'></div>
         <div class='navbar-collapse collapse' [ngClass]='{ "in": isExpanded }'>
           <ul class='nav navbar-nav'>
-            <li [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
+            <!--<li [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
               <a [routerLink]='["/"]' (click)='collapse()'>
+                <span class='glyphicon glyphicon-home'></span> Home
+              </a>
+            </li>-->
+            <li [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
+              <a [routerLink]='["/home"]' (click)='collapse()'>
                 <span class='glyphicon glyphicon-home'></span> Home
               </a>
             </li>
@@ -30,6 +35,11 @@
             <li [routerLinkActive]='["link-active"]'>
               <a [routerLink]='["/course"]' (click)='collapse()'>
                 <span class='glyphicon glyphicon-th-list'></span> Courses
+              </a>
+            </li>
+            <li [routerLinkActive]='["link-active"]'>
+              <a [routerLink]='["/company"]' (click)='collapse()'>
+                <span class='glyphicon glyphicon-th-list'></span> Companies
               </a>
             </li>
           </ul>

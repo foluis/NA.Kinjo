@@ -6,32 +6,55 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
+
+import { LoginComponent } from './account/login.component';
+
 import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { CourseComponent } from './course/course.component';
+import { CompanyComponent } from './company/company.component';
+import { TestComponent } from './test/test.component';
+
+//Services
+import { CompanyService } from './services/company.service';
+
+//Pipes
+import { SummaryPipe } from './pipes/summary.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavMenuComponent,
+    LoginComponent,
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    CourseComponent
+    CourseComponent,
+    CompanyComponent,
+    TestComponent,
+    //Pipes
+    SummaryPipe,
+
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
+      { path: '', component: HomeComponent, pathMatch: 'full' },          
+      { path: 'home', component: HomeComponent },      
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'course', component: CourseComponent },
+      { path: 'company', component: CompanyComponent },
+      { path: 'test', component: TestComponent },
+      { path: 'login', component: LoginComponent },        
     ])
   ],
-  providers: [],
+  providers: [
+    CompanyService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

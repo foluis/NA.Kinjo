@@ -1,0 +1,11 @@
+<h2>{{companies.length}} Companies</h2>
+<button class="btn btn-primary">New</button>
+<br />
+{{text}}
+<br />
+{{text|summary:10}}
+<ul>
+  <li *ngFor="let company of companies">
+    {{company}}
+  </li>
+</ul>

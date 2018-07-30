@@ -1,0 +1,11 @@
+<div style="border: 1px solid red">test Component</div>
+{{text}}
+<br />
+{{text|summary:10}}
+<br />
+<span class="glyphicon glyphicon-star"></span>
+<span class="glyphicon"
+      [class.glyphicon-star]="isFavorite"
+      [class.glyphicon-star-empty]="!isFavorite"
+      (click)="onFavoriteClick()"
+></span>

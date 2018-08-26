@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, ErrorHandler } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
@@ -14,13 +14,18 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { CourseComponent } from './course/course.component';
 import { CompanyComponent } from './company/company.component';
-import { TestComponent } from './test/test.component';
+import { TestComponent } from './test/test/test.component';
+import { PostComponent } from './test/post/post.component';
+import { AppErrorHandler } from './Common/app-error-handler';
 
 //Services
+
 import { CompanyService } from './services/company.service';
+import { PostService } from './services/post.service';
 
 //Pipes
 import { SummaryPipe } from './pipes/summary.pipe';
+
 
 @NgModule({
   declarations: [
@@ -33,8 +38,10 @@ import { SummaryPipe } from './pipes/summary.pipe';
     CourseComponent,
     CompanyComponent,
     TestComponent,
+    PostComponent,
     //Pipes
     SummaryPipe,
+    
 
   ],
   imports: [
@@ -53,7 +60,10 @@ import { SummaryPipe } from './pipes/summary.pipe';
     ])
   ],
   providers: [
-    CompanyService
+    CompanyService,
+    PostService,
+    
+    { provide: ErrorHandler, useClass: AppErrorHandler } // Handles error globaly - replaisment of ErrorHandler with AppErrorHandler class
   ],
   bootstrap: [AppComponent]
 })

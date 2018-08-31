@@ -73,6 +73,10 @@
     <Build Include="Dbo\Programmability\GetCompanyByEmail.sql" />
     <Build Include="Dbo\Programmability\UpdateCompany.sql" />
     <Build Include="Dbo\Programmability\DeleteCompany.sql" />
+    <Build Include="Dbo\Tables\Role.sql" />
+    <Build Include="Dbo\Tables\Module.sql" />
+    <Build Include="Dbo\Tables\AppUserRole.sql" />
+    <Build Include="Dbo\Tables\ModuleRole.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Dbo\Scripts\Post-Deploy\DatabaseInitialData.sql" />
